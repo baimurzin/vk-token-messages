@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vk">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="vendor/css/bootstrap.css" rel="stylesheet"/>
+    <link href="vendor/css/custom.css" rel="stylesheet"/>
+    <script src="vendor/js/jquery-2.1.4.js"></script>
+    <script src="vendor/js/bootstrap.js"></script>
+    <script src="vendor/js/underscore.js"></script>
+    <script src="vendor/js/angular.js"></script>
+    <script src="vendor/js/angular-route.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div ng-view class="col-md-8 col-md-offset-2 main-container"></div>
+        <!--<div ng-controller="MessageController" class="">-->
+            <!--<div class="message-page">-->
+                <!--<h3 class="text-info">{{companion.userInfo.firstName}} {{companion.userInfo.lastName}}</h3>-->
+                <!--<div class="hide-scroll">-->
+                    <!--<div class="messages-wrap">-->
+                        <!--<div class="scroller">-->
+                            <!--<div ng-repeat="message in messages" class="message" ng-class="{my_message: message.to.id == chatId, companion_message: message.from.id == chatId}">-->
+                                <!--<div class="message-text">-->
+                                    <!--<p>-->
+                                        <!--{{message.body}}-->
+                                    <!--</p>-->
+                                    <!--<div>-->
+                                        <!--{{message.date | date:  'medium'}}-->
+                                    <!--</div>-->
+                                <!--</div>&lt;!&ndash;-->
+                    <!--&ndash;&gt;-->
+                                <!--<div class="photo-wrap">-->
+                                    <!--<div class="photo">-->
+                                        <!--<a ng-href="/#/profile/{{message.from.id}}">-->
+                                            <!--<img src="{{my.photo.photoPath}}" ng-if="message.to.id == chatId">-->
+                                            <!--<img src="{{companion.photo.photoPath}}" ng-if="message.from.id == chatId">-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<script src="app/app.js"></script>
+<script src="app/controllers/message.controller.js"></script>
+<script src="app/controllers/chat.controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div class="message-page">
+    <h3 class="text-info">{{users[cid].first_name}} {{users[cid].last_name}}</h3>
+    <h3><a href="#/chats">Назад</a></h3>
+    <div class="hide-scroll">
+        <div class="messages-wrap">
+            <div class="scroller">
+                <div ng-repeat="message in messages" class="message" ng-class="{my_message: message.uid == cid, companion_message: message.from_id == cid}">
+                    <div class="message-text">
+                        <p>
+                            {{message.body}}
+                        </p>
+                        <div>
+                            {{message.date | date:  'medium'}}
+                        </div>
+                    </div><!--
+                    -->
+                    <div class="photo-wrap">
+                        <div class="photo">
+                            <a ng-href="/#/profile/{{message.from_id}}">
+                                <img src="{{users[message.uid].photo_50}}" ng-if="message.out == 1">
+                                <img src="{{users[message.from_id].photo_50}}" ng-if="message.from_id == cid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class=" btn-block btn btn-success pull-right" ng-click="getMore()" >
+        Подгрузить еще
+    </button>
+</div>

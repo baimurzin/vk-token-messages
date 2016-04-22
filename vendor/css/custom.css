@@ -1,0 +1,965 @@
+body{margin-top:50px;}
+.glyphicon { margin-right:10px; }
+.panel-body { padding:0px; }
+.panel-body table tr td { padding-left: 15px }
+.panel-body .table {margin-bottom: 0px; }
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+
+body,html{
+    min-width: 980px;
+    height: 100%;
+    font-size: 14px;
+    font-family: Tahoma, serif;
+    cursor: default;
+}
+
+.left_bar{
+    position: fixed;
+    min-width: 196px;
+    max-width: 196px;
+    width: 196px;
+    left: 0;
+    background: url("/resources/css/images/left_bar_background.gif") repeat;
+    height: 100%;
+    border-right: 1px solid #ffffff;
+}
+
+.right_bar{
+    position: fixed;
+    min-width: 280px;
+    max-width: 280px;
+    height: 100%;
+    background-color: #ecf0f1;
+    right: 0;
+    width: 280px;
+}
+
+.center{
+    border-left: 1px solid #ffffff;
+    background: url("/resources/css/images/left_bar_background.gif") repeat;
+    position: absolute;
+    padding-left: 196px;
+    padding-right: 280px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+.wrapper{
+    position: relative;
+    height: 100%;
+}
+
+.logo{
+    margin: 10px auto;
+    padding: 10px 29px;
+    font-family: Pacifico, serif;
+    font-size: 36px;
+    color: white;
+}
+
+
+.logo hr{
+    position: relative;
+    width: 155px;
+    margin: 0 auto;
+    color: white;
+    left: -8px;
+}
+
+ul.menu-list{
+    padding: 0;
+    cursor: default;
+}
+
+li.menu-list-item{
+    list-style-type: none;
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    color: #4285f4;
+    padding-left: 20px;
+    padding-top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+li.menu-list-item a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #4285f4;
+}
+
+
+li.menu-list-item.active, li.menu-list-item:hover,
+li.menu-list-item a:hover{
+    color: white;
+}
+
+.my-profile-block{
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+    height: 110px;
+    display: inline-block;
+}
+
+
+.profile-image img,
+.image{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 0 solid #4285f4;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.profile-link{
+    padding: 5px;
+}
+
+
+.profile-image.my-profile-image img{
+    width: 30px;
+    height: 30px;
+}
+
+div.seperate-vertical{
+    display: inline-block;
+    height: 100px;
+    width: 1px;
+    position: absolute;
+    border-right: 1px solid #bdc3c7;
+}
+
+.my-seperate-vertical{
+    left: 90px;
+    top: 0;
+}
+
+.icons{
+    position: absolute;
+    display: inline-block;
+    cursor: default;
+    padding: 0;
+    margin: 0;
+}
+
+.my-icons{
+    top: 40px;
+    left: 110px;
+}
+
+li.icons-item{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    list-style: none;
+    margin-left: 5px;
+    text-align: center;
+}
+
+li.icons-item:first-child{
+    margin-left: 0;
+}
+
+.email-icon, .user-icon, .photo-icon, .tools-icon, .logout-icon{
+    background: url("/resources/css/images/sprites.png") no-repeat;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.email-icon:hover, .email-icon.active{
+    background-position: -360px -26px ;
+    width: 19px;
+    height: 13px;
+}
+
+.email-icon{
+    background-position: -312px -21px ;
+    width: 19px;
+    height: 13px;
+}
+
+.user-icon{
+    background-position: -266px -22px ;
+    width: 13px;
+    height: 13px;
+}
+
+.user-icon:hover, .user-icon.active{
+    background-position: -216px -19px ;
+    width: 13px;
+    height: 13px;
+}
+
+.photo-icon:hover, .photo-icon.active{
+    background-position: -163px -19px ;
+    width: 16px;
+    height: 13px;
+}
+
+.photo-icon{
+    background-position: -113px -22px ;
+    width: 16px;
+    height: 13px;
+}
+
+.tools-icon{
+    background-position: -68px -24px ;
+    width: 13px;
+    height: 13px;
+}
+
+.tools-icon:hover, .tools-icon.active{
+    background-position: -20px -25px ;
+    width: 13px;
+    height: 13px;
+}
+
+.logout-icon{
+    background-position: -407px -26px ;
+    width: 13px;
+    height: 13px;
+}
+
+.logout-icon:hover, .logout-icon.active{
+    background-position: -438px -26px;
+    width: 13px;
+    height: 13px;
+}
+
+.right_bar h1{
+    color: #34495e;
+    margin: 20px auto;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.search_inp, .inp{
+    display: block;
+    margin-left: 20px;
+    width: 240px;
+    height: 26px;
+    font-size: 14px;
+    border: 2px solid #4285f4;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+input::-webkit-input-placeholder {
+    font-style: italic;
+    font-family: Tahoma, serif;
+}
+input:-moz-placeholder {
+    font-style: italic;
+    font-family: Tahoma, serif;
+}
+
+input:focus {
+    box-shadow: 0 0 5px #4285f4;
+    border: 2px solid #4285f4;
+    outline: 0 none;
+}
+
+.friends-block{
+    overflow-y: scroll;
+}
+
+.friend{
+    background: url("/resources/css/images/left_bar_background.gif") repeat;
+    width: 100%;
+    height: 120px;
+    position: relative;
+    border: 1px solid #4285f4;
+}
+
+.friend-profile-image{
+    position: absolute;
+    left: 20px;
+    top: 35px;
+    display: inline-block;
+}
+
+.friend-seperate-vertical{
+    top: 10px;
+    left: 90px;
+}
+
+li.icons-item-block{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    list-style: none;
+    text-align: center;
+    color: #ecf0f1;
+    margin-right: 62px;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.friend-icons{
+    top: 50px;
+    left: 110px;
+}
+
+.friend-name{
+    font-family: 'Patrick Hand SC', cursive;
+    position: relative;
+    font-size: 18px;
+    color: #ecf0f1;
+    top: 15px;
+    left: 110px;
+}
+
+.icon-text{
+    color: #4285f4;
+    position: relative;
+    left: 27px;
+    top: -4px;
+}
+
+.fix-user-icon{
+    width: 60px;
+    margin-right: 0 !important;
+    margin-left: 10px !important;
+}
+
+.fix-user-icon .icon-text{
+    left: 20px;
+    width: 60px;
+}
+
+.icons-item-block:hover .icon-text{
+    color: #ecf0f1;
+}
+
+.friends-block-wrapper{
+    margin-top: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.friends-block{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: -15px;
+    overflow: auto;
+}
+
+.center-block{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.center-login-form{
+    width: 300px;
+    height: 350px;
+}
+
+.login-form-wrapper h2, .registration-form-wrapper h2{
+    padding: 5px;
+    text-align: center;
+    color: white;
+    background-color: #137fb7;
+}
+
+.center-registration-form{
+    width: 300px;
+    height: 450px;
+}
+
+.tab{
+    padding: 5px;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    background-color: #ecf0f1;
+    cursor: pointer;
+}
+
+form .inp{
+    margin: 5px 0;
+    width: 100%;
+}
+
+.btn{
+    border-radius: 0;
+    width: auto;
+    padding: 5px 15px;
+    display: inline-block;
+    text-align: center;
+    background-color: #4285f4;
+    color: white;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.btn:hover{
+    color: #eee;
+    background-color: #0f9d58;
+}
+
+.btn:active,
+.btn:visited,
+.btn:focus{
+    color: #eee !important;
+    background-color: #4285f4 !important;
+}
+
+
+
+.notifications-block-wrapper{
+    overflow: hidden;
+    height: 100%;
+    border-top: 1px solid #bdc3c7;
+    position: relative;
+}
+
+
+.notifications-block-wrapper h1{
+    width: 100%;
+    color: #4285f4;
+    padding-left: 20px;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.notifications-block{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-y: auto;
+}
+
+.notification{
+    cursor: default;
+    padding-left: 20px;
+    position: relative;
+    height: 80px;
+    width: 100%;
+
+}
+
+.notification .glyphicon{
+    color: #4285f4;
+    height: 16px;
+    width: 16px;
+    margin-right: 20px;
+}
+
+.hover-white:hover{
+    color: #4285f4;
+}
+
+.hover-cursor{
+    cursor: pointer;
+}
+
+.notification .notification-type{
+    color: #4285f4;
+    font-size: 16px;
+}
+
+.notification .notification-user{
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.notification .text-message{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.notification .notification-count{
+    position: absolute;
+    right: 20px;
+    top: 2px;
+    color: #4285f4;
+}
+
+.notification{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.profile-page{
+    width: 100%;
+    margin: 0px;
+
+    padding: 40px;
+    height: 100%;
+    min-width: 500px;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+}
+
+.profile-photo img{
+    border: 0 solid #4285f4;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 240px;
+    margin-bottom: 10px;
+}
+
+.profile-wrapper{
+    width: 100%
+}
+
+.profile-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.profile-page .profile-photo{
+    flex-basis: 200px;
+    flex-grow: 2;
+}
+
+.profile-page .profile-info{
+    flex-basis: 200px;
+    flex-grow: 3;
+    margin-left: 50px;
+    float: left;
+}
+
+.profile-page .profile-info h1{
+    font-size: 38px;
+    color: white;
+    margin-top: 0 !important;
+    font-family: 'Patrick Hand SC', cursive;
+    text-align: center;
+}
+
+.profile-page .profile-info td{
+    color: #ffffff;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.profile-page .profile-info td:first-child{
+    min-width: 150px;
+}
+
+textarea{
+    resize:none;
+    max-width: 240px;
+    width: 240px;
+    min-height: 100px;
+}
+
+.profile-page .btn{
+    color: #080808;
+}
+
+.profile-posts{
+    width: 100%;
+    margin-top: 10px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.profile-posts h3,
+.profile-posts p,
+.profile-posts span{
+    color: #ffffff;
+}
+
+.post{
+    padding: 5px 15px 5px 5px;
+}
+
+.posts-wrapper{
+    width: 50%;
+}
+
+.post-header{
+    position: relative;
+}
+
+.post-controls{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.post textarea{
+    margin-left: 0;
+}
+
+.add-post textarea{
+    margin-top: 10px;
+    display: block;
+
+}
+
+.btn-wrap{
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: space-between;
+    min-width: 240px;
+}
+.btn-wrap .btn{
+    width: 50%;
+    margin-top: 10px;
+    margin-right: 2px;
+    flex-grow: 1;
+}
+
+.profile-photo .btn{
+    max-width: 240px
+
+}
+
+.full-width{
+    width: 100%;
+}
+
+.liked{
+    color: #428bca;
+}
+
+.photoUploader{
+    position: absolute;
+    left: -1500px;
+}
+
+.add-post{
+    margin-top: 10px;
+}
+
+.background{
+    height: 100%;
+    background: url("/resources/css/images/left_bar_background.gif") repeat;
+}
+
+.small-img{
+    height: 100px;
+    cursor: pointer;
+}
+
+img.img-rounded{
+    border-radius: 3px;
+    display: inline-block;
+}
+
+div.profile-block-div{
+    margin-top: 10px;
+}
+
+.gallery{
+    width: 100%;
+}
+
+.gallery-container{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+.gallery-container img{
+    max-height: 33em;
+    margin: 0 auto;
+    display: block;
+}
+
+.slider-container{
+    display: block;
+    margin: auto;
+}
+
+.slider{
+    display: table;
+    margin: 0 auto;
+    position: relative;
+}
+
+.arrows{
+    font-size: 18px;
+}
+
+
+.my-animation.ng-enter {
+    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+.my-animation.ng-enter-stagger {
+    /* this will have a 100ms delay between each successive leave animation */
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+
+    /* in case the stagger doesn't work then these two values
+       must be set to 0 to avoid an accidental CSS inheritance */
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+}
+.my-animation.ng-enter.ng-enter-active {
+    /* standard transition styles */
+    left: 100%;
+}
+
+
+.my-animation.ng-leave {
+    /* standard transition code */
+    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+.my-animation.ng-leave-stagger {
+    /* this will have a 100ms delay between each successive leave animation */
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+
+    /* in case the stagger doesn't work then these two values
+       must be set to 0 to avoid an accidental CSS inheritance */
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+}
+.my-animation.ng-leave.ng-leave-active {
+    /* standard transition styles */
+    left: 0;
+}
+
+.animate-enter,
+.animate-leave
+{
+    -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+
+.animate-enter {
+    left: 100%;
+}
+.animate-enter.animate-enter-active {
+    left: 0;
+}
+
+.animate-leave {
+    left: 0;
+}
+.animate-leave.animate-leave-active{
+    left: -100%;
+}
+
+.message-page{
+    overflow: hidden !important;
+    padding: 3em 10em 0;
+}
+
+.message{
+    margin-bottom: 0.5em;
+    position: relative;
+    width: 100%;
+    display: flex;
+    color: #ecf0f1;
+}
+
+.my_message{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.companion_message{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.companion_message .photo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 36px;
+    width: 0;
+    height: 0;
+    border: 7px solid #4285f4;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.my_message .photo::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    right: 36px;
+    width: 0;
+    height: 0;
+    border: 7px solid #4285f4;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+.message-text{
+    display: inline-block;
+    max-width: 15em;
+    min-width: 15em;
+    padding: 0.3em 1em;
+    background-color: #4285f4;
+    word-wrap: break-word;
+}
+
+.companion_message .photo{
+    order: 1;
+}
+.companion_message .message-text{
+    order: 2;
+}
+
+.message .photo{
+    position: relative;
+}
+
+.message .photo img{
+    width: 50px;
+    height: 50px;
+}
+
+.message_area{
+    resize: none !important;
+    min-height: 5em !important;
+}
+
+.add_background{
+    background: url("/resources/css/images/left_bar_background.gif") repeat;
+}
+
+
+.not_read .message-text{
+    background-color: #ffffff;
+    color:  #4285f4;
+}
+
+
+.messages-wrap{
+    height: 30em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    left: 0;
+    right: -17px;
+}
+
+.hide-scroll{
+    position: relative;
+    width: 100%;
+    height: 30em;
+    overflow: hidden;
+}
+
+.message-profile-img{
+    display: inline-block;
+    position: relative;
+}
+
+.dialog-message-block{
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.dialog-wrap{
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #4285f4;
+}
+
+.dialog-wrap{
+
+}
+
+
+.right-bar{
+    padding: 10px;
+}
+
+body{
+    background-color: #e5e5e5
+}
+
+
+.main-container{
+    padding-top: 60px;
+    background-color: #ffffff;
+    height: 100%;
+    border: solid black 1px;
+}
+
+.head{
+    font-size: 24px;
+}
+
+.row{
+    background: #ffffff;
+}
+
+.big-image{
+    width: 100px;
+    height: auto;
+}
+
+.margin-bottom{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.border-bottom{
+    border-bottom: 1px solid #4285f4;
+}
+
+.user-info-inp{
+    display: inline-block;
+}
+
+.main-photo{
+    max-width: 400px;
+}
+
+.inline{
+    display: inline-block;
+}
+
+.main-photo-wrapper{
+    min-height: 450px;
+}
+
+.inp.message-input{
+    width: 60% !important;
+}
+
+.full-width{
+    max-width: inherit;
+}
